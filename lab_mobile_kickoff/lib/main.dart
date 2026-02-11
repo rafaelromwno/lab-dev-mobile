@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:lab_mobile_kickoff/repository/ServicoRepositoryFake.dart';
+import 'package:lab_mobile_kickoff/presentation/HomePage.dart';
+import 'package:lab_mobile_kickoff/domain/Servico.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MaterialApp(
+      home: HomePage(
+        servico: Servico(
+          id: "1",
+          titulo: "Aula 2 - Laboratório de Desenvolvimento Mobile",
+          descricao: "Atividade 2",
+        ),
+      ),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
