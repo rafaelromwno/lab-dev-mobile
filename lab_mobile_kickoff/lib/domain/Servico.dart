@@ -7,4 +7,17 @@ class Servico {
     required this.id,
     required this.titulo,
     required this.descricao,
-  });}
+  });
+
+  Servico copyWith({
+    String? id,
+    String? titulo,
+    String? descricao,
+  }) {
+    return Servico(
+      id: id ?? this.id,
+      titulo: titulo ?? this.titulo,
+      descricao: descricao ?? this.descricao,
+    );
+  }
+}
